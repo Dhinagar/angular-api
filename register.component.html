@@ -1,0 +1,164 @@
+<!-- <div class="col-lg-12">
+  <form
+    class="card"
+    style="margin-left: auto;
+    margin-right: auto;
+    width: 71%;
+    margin-top: 64px;
+    height: 455px;
+    border: 2px solid gray;
+    padding: 6px;
+    background-color: lightblue;
+    "
+    #form="ngForm"
+    (ngSubmit)="create(form)"
+  >
+    <h3 style="margin-left:432px">Register</h3>
+    <div class="form-group">
+      <label for="firstname">First Name</label>
+      <input
+        type="text"
+        class="form-control"
+        id="firstname"
+        name="firstname"
+        #firstname="ngModel"
+        required
+        ngModel
+      />
+      <div
+        class="text-danger mt-2"
+        *ngIf="firstname.invalid && firstname.touched"
+      >
+        <p *ngIf="firstname.errors.required">first name is required</p>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="lastname">last Name</label>
+      <input
+        type="text"
+        class="form-control"
+        id="lastname"
+        name="lastname"
+        #lastname="ngModel"
+        required
+        ngModel
+      />
+
+      <div
+        class="text-danger mt-2"
+        *ngIf="lastname.invalid && lastname.touched"
+      >
+        <p *ngIf="lastname.errors.required">last name is required</p>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input
+        type="email"
+        class="form-control"
+        id="email"
+        name="email"
+        #email="ngModel"
+        ngModel
+        required
+      />
+      <div class="text-danger mt-2" *ngIf="email.invalid && email.touched">
+        <p *ngIf="email.errors.required">email is required</p>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="password">password</label>
+      <input
+        type="text"
+        class="form-control"
+        id="password"
+        name="password"
+        #password="ngModel"
+        ngModel
+        required
+      />
+      <div
+        class="text-danger mt-2"
+        *ngIf="password.invalid && password.touched"
+      >
+        <p *ngIf="password.errors.required">last name is required</p>
+      </div>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+    <small>If u already exist go to login ?<a href="login"> login</a></small>
+  </form>
+</div> -->
+<div class="row justify-content-center">
+  <div class="col-md-5">
+    <div class="card">
+      <div class="card-header"><h3>Register</h3></div>
+      <div class="card-body">
+        <form class="form">
+          <div class="form-group">
+            <label for="exampleInputfirstname">Firstname</label>
+            <input
+              [(ngModel)]="regUser.firstname"
+              type="text"
+              name="firstname"
+              class="form-control"
+              id="exampleInputfirstname"
+              placeholder="firstname"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="exampleInputlastname">lastname</label>
+            <input
+              [(ngModel)]="regUser.lastname"
+              type="text"
+              name="lastname"
+              class="form-control"
+              id="exampleInputlastname"
+              placeholder="Lastname"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="exampleInputemail">email</label>
+            <input
+              [(ngModel)]="regUser.email"
+              type="email"
+              name="email"
+              class="form-control"
+              id="exampleInputemail"
+              placeholder="email"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1">Password</label>
+            <input
+              [(ngModel)]="regUser.password"
+              type="password"
+              name="password"
+              class="form-control"
+              id="exampleInputPassword1"
+              placeholder="password"
+              required
+            />
+          </div>
+
+          <button
+            type="submit"
+            class="btn btn-primary floated-left"
+            (click)="register()"
+            routerLink="/login"
+          >
+            Register
+          </button>
+          <!-- <button type="submit" class="floated-right btn btn-secondary">
+            Login
+          </button> -->
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,93 @@
+<!-- <div
+  class="card"
+  style="margin-left: auto;
+    margin-right: auto;
+    width: 27%;
+    margin-top: 198px;
+    height: 214px;
+    margin-bottom: auto;
+    box-shadow: lightcoral;
+"
+>
+  <form
+    style="padding: 6px;
+  background-color:lightblue;
+  "
+  >
+    <div class="card-header"><h3>Login form</h3></div>
+
+    <div class="form-group">
+      <label for="exampleInputEmail1">Email address</label>
+      <input
+        type="email"
+        class="form-control"
+        id="exampleInputEmail1"
+        required
+      />
+    </div>
+    <div class="form-group">
+      <label for="exampleInputPassword1">Password</label>
+      <input
+        type="password"
+        class="form-control"
+        id="exampleInputPassword1"
+        required
+      />
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+    <small
+      >If u not registerd go register ?<a href="register"> register</a></small
+    >
+  </form>
+</div> -->
+<div class="row justify-content-center">
+  <div class="col-md-5">
+    <div class="card">
+      <div class="card-header"><h3>Login</h3></div>
+      <div class="card-body">
+        <form class="form">
+          <div class="form-group">
+            <label for="exampleInputEmail1">Email address</label>
+            <input
+              [(ngModel)]="loginUser.email"
+              type="email"
+              name="email"
+              class="form-control"
+              id="exampleInputEmail1"
+              placeholder="email"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1">Password</label>
+            <input
+              [(ngModel)]="loginUser.password"
+              type="password"
+              name="password"
+              class="form-control"
+              id="exampleInputPassword1"
+              placeholder="password"
+              required
+            />
+          </div>
+
+          <button
+            type="submit"
+            class="btn btn-primary floated-left"
+            (click)="login()"
+          >
+            Login
+          </button>
+          <button
+            type="submit"
+            class="floated-right btn btn-secondary"
+            routerLnk="/register"
+          >
+            register
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
